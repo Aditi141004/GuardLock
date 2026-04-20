@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_main_gradient">
+
+    <!-- ─── TOP SECTION: Logo + Branding ─── -->
+
+    <!-- Outer glow ring -->
+    <View
+        android:id="@+id/viewShieldGlowOuter"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:background="@drawable/bg_shield_glow"
+        android:alpha="0.4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="56dp" />
+
+    <!-- Inner glow ring -->
+    <View
+        android:id="@+id/viewShieldGlowInner"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:background="@drawable/bg_shield_glow"
+        android:alpha="0.6"
+        app:layout_constraintTop_toTopOf="@id/viewShieldGlowOuter"
+        app:layout_constraintBottom_toBottomOf="@id/viewShieldGlowOuter"
+        app:layout_constraintStart_toStartOf="@id/viewShieldGlowOuter"
+        app:layout_constraintEnd_toEndOf="@id/viewShieldGlowOuter" />
+
+    <!-- Shield logo -->
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_shield"
+        android:contentDescription="@string/shield_desc"
+        android:scaleType="fitCenter"
+        app:layout_constraintTop_toTopOf="@id/viewShieldGlowOuter"
+        app:layout_constraintBottom_toBottomOf="@id/viewShieldGlowOuter"
+        app:layout_constraintStart_toStartOf="@id/viewShieldGlowOuter"
+        app:layout_constraintEnd_toEndOf="@id/viewShieldGlowOuter" />
+
+    <!-- App name -->
+    <TextView
+        android:id="@+id/txtAppName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GUARDLOCK"
+        android:textColor="#FFFFFF"
+        android:textSize="28sp"
+        android:letterSpacing="0.18"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintTop_toBottomOf="@id/viewShieldGlowOuter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Tagline -->
+    <TextView
+        android:id="@+id/txtTagline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mobile Anti-Theft Protection"
+        android:textColor="#8A9BB5"
+        android:textSize="12sp"
+        android:letterSpacing="0.08"
+        android:fontFamily="sans-serif"
+        app:layout_constraintTop_toBottomOf="@id/txtAppName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="4dp" />
+
+    <!-- Blue accent divider -->
+    <View
+        android:id="@+id/viewDivider"
+        android:layout_width="48dp"
+        android:layout_height="2dp"
+        android:background="@color/accent_blue"
+        android:alpha="0.7"
+        app:layout_constraintTop_toBottomOf="@id/txtTagline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp" />
+
+
+    <!-- ─── MIDDLE SECTION: Status Card ─── -->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardStatus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#0F1C35"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="0dp"
+        android:layout_marginHorizontal="24dp"
+        app:layout_constraintTop_toBottomOf="@id/viewDivider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="28dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Label row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Protection Status"
+                    android:textColor="#8A9BB5"
+                    android:textSize="11sp"
+                    android:letterSpacing="0.12"
+                    android:textAllCaps="true"
+                    android:fontFamily="sans-serif-medium" />
+
+                <!-- Live indicator dot -->
+                <View
+                    android:id="@+id/viewStatusDot"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:background="@drawable/ic_dot_inactive"
+                    android:layout_marginEnd="6dp" />
+
+                <TextView
+                    android:id="@+id/txtStatusBadge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="OFF"
+                    android:textColor="#FF4757"
+                    android:textSize="10sp"
+                    android:letterSpacing="0.10"
+                    android:textAllCaps="true"
+                    android:fontFamily="sans-serif-medium" />
+            </LinearLayout>
+
+            <!-- Thin separator line -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#1A2E50"
+                android:layout_marginBottom="18dp" />
+
+            <!-- Main status text (existing ID preserved) -->
+            <TextView
+                android:id="@+id/txtStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status: OFF"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:letterSpacing="0.05"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium"
+                tools:text="Status: OFF" />
+
+            <TextView
+                android:id="@+id/txtStatusSub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Place phone and tap Activate"
+                android:textColor="#8A9BB5"
+                android:textSize="13sp"
+                android:layout_marginTop="6dp"
+                android:fontFamily="sans-serif"
+                tools:text="Place phone and tap Activate" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <!-- ─── PIN ENTRY FIELD (existing ID preserved) ─── -->
+
+    <EditText
+        android:id="@+id/etPin"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:hint="Enter PIN to deactivate"
+        android:inputType="numberPassword"
+        android:background="@drawable/bg_pin_field"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#3D5270"
+        android:visibility="gone"
+        android:gravity="center_vertical"
+        android:fontFamily="sans-serif"
+        android:layout_marginHorizontal="24dp"
+        app:layout_constraintTop_toBottomOf="@id/cardStatus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+
+    <!-- ─── BOTTOM SECTION: Activate Button ─── -->
+
+    <!-- Safety tip label -->
+    <TextView
+        android:id="@+id/txtSafetyTip"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="🔒  Motion detection activates instantly"
+        android:textColor="#3D5270"
+        android:textSize="12sp"
+        android:gravity="center"
+        android:fontFamily="sans-serif"
+        android:layout_marginHorizontal="32dp"
+        app:layout_constraintBottom_toTopOf="@id/btnToggle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Activate / Deactivate button (existing ID preserved) -->
+    <Button
+        android:id="@+id/btnToggle"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:text="Activate Protection"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:letterSpacing="0.06"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium"
+        android:background="@drawable/bg_btn_activate"
+        android:stateListAnimator="@null"
+        android:layout_marginHorizontal="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="36dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GuardLock</string>
+    <string name="tagline">Mobile Anti-Theft Protection</string>
+    <string name="status_off">SYSTEM INACTIVE</string>
+    <string name="status_on">SYSTEM ARMED</string>
+    <string name="btn_activate">Activate Protection</string>
+    <string name="btn_deactivate">Deactivate System</string>
+    <string name="pin_hint">Enter PIN to deactivate</string>
+    <string name="label_sensitivity">Motion Sensitivity</string>
+    <string name="shield_desc">Security Shield Icon</string>
+    <string name="status_label">Protection Status</string>
+</resources>

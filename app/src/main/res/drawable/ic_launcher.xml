@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- ═══════════════════════════════════════
+         LAYER 1 — Dark rounded background
+    ════════════════════════════════════════ -->
+    <path android:pathData="M0,26 Q0,0 26,0 H82 Q108,0 108,26 V82 Q108,108 82,108 H26 Q0,108 0,82 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="linear"
+                android:startX="0"
+                android:startY="0"
+                android:endX="108"
+                android:endY="108"
+                android:startColor="#0C1526"
+                android:endColor="#060B18" />
+        </aapt:attr>
+    </path>
+
+    <!-- Background inner edge (subtle blue tint) -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#1E90FF"
+        android:strokeAlpha="0.10"
+        android:strokeWidth="1.2"
+        android:pathData="M2,26 Q2,2 26,2 H82 Q106,2 106,26 V82 Q106,106 82,106 H26 Q2,106 2,82 Z" />
+
+
+    <!-- ═══════════════════════════════════════
+         LAYER 2 — Glow rings (radial gradients)
+    ════════════════════════════════════════ -->
+
+    <!-- Outermost ambient glow -->
+    <path android:pathData="M54,5 a49,49 0 0 1 0,98 a49,49 0 0 1 0,-98 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="radial"
+                android:centerX="54"
+                android:centerY="54"
+                android:gradientRadius="49"
+                android:startColor="#121E90FF"
+                android:endColor="#001E90FF" />
+        </aapt:attr>
+    </path>
+
+    <!-- Mid glow ring -->
+    <path android:pathData="M54,14 a40,40 0 0 1 0,80 a40,40 0 0 1 0,-80 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="radial"
+                android:centerX="54"
+                android:centerY="54"
+                android:gradientRadius="40"
+                android:startColor="#1C1E90FF"
+                android:endColor="#001E90FF" />
+        </aapt:attr>
+    </path>
+
+    <!-- Inner core glow -->
+    <path android:pathData="M54,22 a32,32 0 0 1 0,64 a32,32 0 0 1 0,-64 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="radial"
+                android:centerX="54"
+                android:centerY="54"
+                android:gradientRadius="32"
+                android:startColor="#281E90FF"
+                android:endColor="#001E90FF" />
+        </aapt:attr>
+    </path>
+
+
+    <!-- ═══════════════════════════════════════
+         LAYER 3 — Shield body
+    ════════════════════════════════════════ -->
+
+    <!-- Shield depth shadow -->
+    <path
+        android:fillColor="#094AA8"
+        android:pathData="M54,24 L27,35 V54 C27,71.5 39,83 54,88.5 C69,83 81,71.5 81,54 V35 Z" />
+
+    <!-- Shield main body with gradient -->
+    <path android:pathData="M54,22 L24,34 V54 C24,72.5 38,85 54,91 C70,85 84,72.5 84,54 V34 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="linear"
+                android:startX="24"
+                android:startY="22"
+                android:endX="84"
+                android:endY="91"
+                android:startColor="#2EA3FF"
+                android:endColor="#0A5DBF" />
+        </aapt:attr>
+    </path>
+
+    <!-- Shield right-edge rim (slightly darker, gives 3-D depth) -->
+    <path android:pathData="M54,22 L84,34 V54 C84,72.5 70,85 54,91 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="linear"
+                android:startX="54"
+                android:startY="22"
+                android:endX="84"
+                android:endY="91"
+                android:startColor="#0A5DBF"
+                android:endColor="#083F8A" />
+        </aapt:attr>
+    </path>
+
+    <!-- Shield top-left shine -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.18"
+        android:pathData="M54,27 L31,37 V51 Q41,60 54,61 Z" />
+
+    <!-- Shield inner border stroke -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFF"
+        android:strokeAlpha="0.16"
+        android:strokeWidth="1.4"
+        android:pathData="M54,28 L31,39 V54 C31,69 42,79.5 54,84.5 C66,79.5 77,69 77,54 V39 Z" />
+
+
+    <!-- ═══════════════════════════════════════
+         LAYER 4 — Lock icon
+    ════════════════════════════════════════ -->
+
+    <!-- Lock shackle (arch) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.97"
+        android:pathData="M46,58 L46,50 C46,39 62,39 62,50 L62,58 L58,58 L58,50 C58,44 50,44 50,50 L50,58 Z" />
+
+    <!-- Lock body -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.97"
+        android:pathData="M41,58 H67 Q70,58 70,61 V74 Q70,77 67,77 H41 Q38,77 38,74 V61 Q38,58 41,58 Z" />
+
+    <!-- Keyhole — circle -->
+    <path
+        android:pathData="M54,62.5 a4,4 0 0 1 0,8 a4,4 0 0 1 0,-8 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="radial"
+                android:centerX="54"
+                android:centerY="66.5"
+                android:gradientRadius="4"
+                android:startColor="#0A4DB8"
+                android:endColor="#073A8A" />
+        </aapt:attr>
+    </path>
+
+    <!-- Keyhole — slot -->
+    <path
+        android:fillColor="#0A4DB8"
+        android:pathData="M52.3,66.5 H55.7 V74.2 H52.3 Z" />
+
+</vector>

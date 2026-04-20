@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Background palette -->
+    <color name="bg_deep">#060B18</color>
+    <color name="bg_surface">#0A1220</color>
+    <color name="bg_card">#0F1C35</color>
+    <color name="bg_card_stroke">#1A2E50</color>
+
+    <!-- Brand / accent -->
+    <color name="accent_blue">#1E90FF</color>
+    <color name="accent_blue_dark">#0066CC</color>
+    <color name="accent_blue_muted">#1A2E50</color>
+    <color name="accent_glow">#331E90FF</color>
+
+    <!-- Status colors -->
+    <color name="status_active">#00E676</color>
+    <color name="status_inactive">#FF4757</color>
+    <color name="status_standby">#FFD600</color>
+
+    <!-- Text -->
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#8A9BB5</color>
+    <color name="text_hint">#3D5270</color>
+    <color name="text_accent">#1E90FF</color>
+
+    <!-- Utility -->
+    <color name="transparent">#00000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+</resources>
