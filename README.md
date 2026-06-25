@@ -29,8 +29,7 @@ Developed as part of the **Mobile Communication** course using **Kotlin** and **
 
 | Home Screen          | Monitoring          | Alarm Triggered          |
 | -------------------- | ------------------- | ------------------------ |
-| ![](home_screen.png) | ![](monitoring.png) | ![](alarm_triggered.png) |
-
+| ![](screenshots/home_screen.png) | ![](screenshots/monitoring.png) | ![](screenshots/alarm_triggered.png) |
 ---
 
 ## 🛠️ Tech Stack
